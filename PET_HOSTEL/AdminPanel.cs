@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace PET_HOSTEL
@@ -162,12 +163,7 @@ namespace PET_HOSTEL
             }
         }
 
-        private void txt_usertype_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        
+      
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
@@ -347,6 +343,22 @@ namespace PET_HOSTEL
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void txt_usertype_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        private void panel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

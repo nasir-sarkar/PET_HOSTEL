@@ -94,9 +94,7 @@ namespace PET_HOSTEL
                             }
                             else if (userType == 0)
                             {
-
-                             //   AdminPanel adminPanel = new AdminPanel();
-                                //adminPanel.Show();
+                              
                             }
                             else
                             {

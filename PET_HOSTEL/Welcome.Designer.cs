@@ -147,7 +147,7 @@ namespace PET_HOSTEL
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(521, 10);
+            this.label16.Location = new System.Drawing.Point(515, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(141, 23);
             this.label16.TabIndex = 9;

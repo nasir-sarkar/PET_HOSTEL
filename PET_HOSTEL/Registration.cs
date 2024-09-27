@@ -59,6 +59,16 @@ namespace PET_HOSTEL
             {
                 MessageBox.Show("Please enter a valid email address", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (signup_password.Text.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if ((DateTime.Now.Year - signup_dob.Value.Year) < 15 ||
+             (DateTime.Now.Year - signup_dob.Value.Year == 15 && DateTime.Now.DayOfYear < signup_dob.Value.DayOfYear))
+            {
+                MessageBox.Show("You must be at least 15 years old to register", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
             else
 

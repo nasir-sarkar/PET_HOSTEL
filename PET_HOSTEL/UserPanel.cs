@@ -126,9 +126,9 @@ namespace PET_HOSTEL
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    /*PaymentMethod z = new PaymentMethod();
+                    PaymentMethod z = new PaymentMethod();
                     z.Show();
-                    this.Hide();*/
+                    this.Hide();
                 }
                 else
                 {
@@ -197,9 +197,9 @@ namespace PET_HOSTEL
 
         private void button_Logout_Click(object sender, EventArgs e)
         {
-            /*Login lForm1 = new Login();
+            Login lForm1 = new Login();
             lForm1.Show();
-            this.Hide();*/
+            this.Hide();
         }
 
         private void label9_Click(object sender, EventArgs e)

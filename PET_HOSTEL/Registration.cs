@@ -38,9 +38,9 @@ namespace PET_HOSTEL
 
         private void register_login_Click(object sender, EventArgs e)
         {
-            /*Login lForm1 = new Login();
+            Login lForm1 = new Login();
             lForm1.Show();
-            this.Hide();*/
+            this.Hide();
         }
 
         private void signup_close_Click(object sender, EventArgs e)
@@ -102,9 +102,9 @@ namespace PET_HOSTEL
 
                                 MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                               /* Login lForm1 = new Login();
+                                Login lForm1 = new Login();
                                 lForm1.Show();
-                                this.Hide(); */
+                                this.Hide();
                             }
                         }
                     }
@@ -140,9 +140,9 @@ namespace PET_HOSTEL
 
         private void button1_Click(object sender, EventArgs e)
         {
-           /* Login lForm1 = new Login();
+            Login lForm1 = new Login();
             lForm1.Show();
-            this.Hide();*/
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

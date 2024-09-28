@@ -76,13 +76,13 @@ namespace PET_HOSTEL
                     isPaymentConfirmed = true;
                 }
                 else
-                {                  
-                    MessageBox.Show("You entered the wrong amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show("Please, enter the correct amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please, enter the correct amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {              

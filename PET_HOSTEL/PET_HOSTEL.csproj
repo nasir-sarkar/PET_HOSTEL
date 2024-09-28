@@ -221,5 +221,14 @@
   <ItemGroup>
     <None Include="Resources\close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet-shop-center-icon_24877-3880.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\algorithm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

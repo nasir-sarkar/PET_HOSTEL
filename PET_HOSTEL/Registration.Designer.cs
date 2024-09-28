@@ -31,6 +31,9 @@ namespace PET_HOSTEL
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.confirm_password = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.confirm_showPass = new System.Windows.Forms.CheckBox();
             this.signup_dob = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,9 +47,7 @@ namespace PET_HOSTEL
             this.label3 = new System.Windows.Forms.Label();
             this.signup_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.confirm_password = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.confirm_showPass = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@ namespace PET_HOSTEL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.confirm_password);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.confirm_showPass);
@@ -76,10 +78,43 @@ namespace PET_HOSTEL
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // confirm_password
+            // 
+            this.confirm_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.confirm_password.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm_password.Location = new System.Drawing.Point(529, 423);
+            this.confirm_password.Multiline = true;
+            this.confirm_password.Name = "confirm_password";
+            this.confirm_password.PasswordChar = 'x';
+            this.confirm_password.Size = new System.Drawing.Size(428, 32);
+            this.confirm_password.TabIndex = 30;
+            this.confirm_password.TextChanged += new System.EventHandler(this.confirm_password_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(525, 394);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 21);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Confirm Password:";
+            // 
+            // confirm_showPass
+            // 
+            this.confirm_showPass.AutoSize = true;
+            this.confirm_showPass.Location = new System.Drawing.Point(834, 397);
+            this.confirm_showPass.Name = "confirm_showPass";
+            this.confirm_showPass.Size = new System.Drawing.Size(129, 21);
+            this.confirm_showPass.TabIndex = 28;
+            this.confirm_showPass.Text = "Show Password";
+            this.confirm_showPass.UseVisualStyleBackColor = true;
+            this.confirm_showPass.CheckedChanged += new System.EventHandler(this.confirm_showPass_CheckedChanged);
+            // 
             // signup_dob
             // 
             this.signup_dob.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_dob.Location = new System.Drawing.Point(537, 267);
+            this.signup_dob.Location = new System.Drawing.Point(529, 257);
             this.signup_dob.Name = "signup_dob";
             this.signup_dob.Size = new System.Drawing.Size(428, 26);
             this.signup_dob.TabIndex = 27;
@@ -89,7 +124,7 @@ namespace PET_HOSTEL
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(533, 243);
+            this.label5.Location = new System.Drawing.Point(525, 233);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 21);
             this.label5.TabIndex = 26;
@@ -111,7 +146,7 @@ namespace PET_HOSTEL
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(673, 461);
+            this.button1.Location = new System.Drawing.Point(664, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 36);
             this.button1.TabIndex = 22;
@@ -123,7 +158,7 @@ namespace PET_HOSTEL
             // 
             this.signup_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.signup_password.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_password.Location = new System.Drawing.Point(538, 340);
+            this.signup_password.Location = new System.Drawing.Point(530, 330);
             this.signup_password.Multiline = true;
             this.signup_password.Name = "signup_password";
             this.signup_password.PasswordChar = 'x';
@@ -135,7 +170,7 @@ namespace PET_HOSTEL
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(533, 310);
+            this.label6.Location = new System.Drawing.Point(525, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 21);
             this.label6.TabIndex = 19;
@@ -146,7 +181,7 @@ namespace PET_HOSTEL
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(532, 40);
+            this.label1.Location = new System.Drawing.Point(524, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 30);
             this.label1.TabIndex = 18;
@@ -156,7 +191,7 @@ namespace PET_HOSTEL
             // signup_showPass
             // 
             this.signup_showPass.AutoSize = true;
-            this.signup_showPass.Location = new System.Drawing.Point(842, 313);
+            this.signup_showPass.Location = new System.Drawing.Point(834, 303);
             this.signup_showPass.Name = "signup_showPass";
             this.signup_showPass.Size = new System.Drawing.Size(129, 21);
             this.signup_showPass.TabIndex = 15;
@@ -170,7 +205,7 @@ namespace PET_HOSTEL
             this.signup_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signup_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_btn.ForeColor = System.Drawing.Color.White;
-            this.signup_btn.Location = new System.Drawing.Point(538, 461);
+            this.signup_btn.Location = new System.Drawing.Point(529, 472);
             this.signup_btn.Name = "signup_btn";
             this.signup_btn.Size = new System.Drawing.Size(121, 36);
             this.signup_btn.TabIndex = 14;
@@ -182,7 +217,7 @@ namespace PET_HOSTEL
             // 
             this.signup_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.signup_username.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_username.Location = new System.Drawing.Point(537, 198);
+            this.signup_username.Location = new System.Drawing.Point(529, 188);
             this.signup_username.Multiline = true;
             this.signup_username.Name = "signup_username";
             this.signup_username.Size = new System.Drawing.Size(428, 32);
@@ -193,7 +228,7 @@ namespace PET_HOSTEL
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(533, 168);
+            this.label3.Location = new System.Drawing.Point(525, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 21);
             this.label3.TabIndex = 12;
@@ -204,7 +239,7 @@ namespace PET_HOSTEL
             // 
             this.signup_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.signup_email.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_email.Location = new System.Drawing.Point(537, 127);
+            this.signup_email.Location = new System.Drawing.Point(529, 117);
             this.signup_email.Multiline = true;
             this.signup_email.Name = "signup_email";
             this.signup_email.Size = new System.Drawing.Size(428, 32);
@@ -215,45 +250,24 @@ namespace PET_HOSTEL
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(533, 97);
+            this.label2.Location = new System.Drawing.Point(525, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Email:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // confirm_password
+            // label7
             // 
-            this.confirm_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirm_password.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirm_password.Location = new System.Drawing.Point(538, 412);
-            this.confirm_password.Multiline = true;
-            this.confirm_password.Name = "confirm_password";
-            this.confirm_password.PasswordChar = 'x';
-            this.confirm_password.Size = new System.Drawing.Size(428, 32);
-            this.confirm_password.TabIndex = 30;
-            this.confirm_password.TextChanged += new System.EventHandler(this.confirm_password_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(534, 383);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 21);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Confirm Password:";
-            // 
-            // confirm_showPass
-            // 
-            this.confirm_showPass.AutoSize = true;
-            this.confirm_showPass.Location = new System.Drawing.Point(843, 386);
-            this.confirm_showPass.Name = "confirm_showPass";
-            this.confirm_showPass.Size = new System.Drawing.Size(129, 21);
-            this.confirm_showPass.TabIndex = 28;
-            this.confirm_showPass.Text = "Show Password";
-            this.confirm_showPass.UseVisualStyleBackColor = true;
-            this.confirm_showPass.CheckedChanged += new System.EventHandler(this.confirm_showPass_CheckedChanged);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(525, 365);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(299, 20);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Password must be at least 6 characters long.";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Registration
             // 
@@ -291,5 +305,6 @@ namespace PET_HOSTEL
         private System.Windows.Forms.TextBox confirm_password;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox confirm_showPass;
+        private System.Windows.Forms.Label label7;
     }
 }

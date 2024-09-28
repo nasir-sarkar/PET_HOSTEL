@@ -213,5 +213,10 @@ namespace PET_HOSTEL
                 confirm_password.PasswordChar = '*';
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

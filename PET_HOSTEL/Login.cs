@@ -14,10 +14,13 @@ namespace PET_HOSTEL
     public partial class Login: Form
     {
 
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
+        private SqlConnection connect;
+
         public Login()
         {
             InitializeComponent();
+            DataAccess dataAccess = new DataAccess();
+            connect = new SqlConnection(dataAccess.GetConnectionString());
         }
 
         private void label2_Click(object sender, EventArgs e)

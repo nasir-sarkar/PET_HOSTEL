@@ -67,6 +67,7 @@
             this.npass.PasswordChar = '*';
             this.npass.Size = new System.Drawing.Size(311, 36);
             this.npass.TabIndex = 2;
+            this.npass.TextChanged += new System.EventHandler(this.npass_TextChanged);
             // 
             // cpass
             // 

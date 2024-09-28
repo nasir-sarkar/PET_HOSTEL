@@ -69,5 +69,17 @@ namespace PET_HOSTEL
             CardPayment f = new CardPayment();
             f.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            UserPanel userPanel = new UserPanel();
+            userPanel.Show();
+            this.Hide();
+        }
     }
 }

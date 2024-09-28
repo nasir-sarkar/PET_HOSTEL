@@ -508,7 +508,7 @@ namespace PET_HOSTEL
         {
             Login l = new Login();
             l.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void signup_showPass_CheckedChanged_1(object sender, EventArgs e)

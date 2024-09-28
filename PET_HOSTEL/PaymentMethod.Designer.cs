@@ -32,12 +32,12 @@ namespace PET_HOSTEL
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentMethod));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.upay = new System.Windows.Forms.PictureBox();
             this.rocked = new System.Windows.Forms.PictureBox();
             this.nogod = new System.Windows.Forms.PictureBox();
@@ -79,6 +79,25 @@ namespace PET_HOSTEL
             this.panel1.Size = new System.Drawing.Size(981, 92);
             this.panel1.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.button1.Image = global::PET_HOSTEL.Properties.Resources.close1;
+            this.button1.Location = new System.Drawing.Point(944, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 30);
+            this.button1.TabIndex = 44;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -92,6 +111,7 @@ namespace PET_HOSTEL
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(87, 384);
             this.label3.Name = "label3";
@@ -127,6 +147,7 @@ namespace PET_HOSTEL
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(740, 246);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -137,28 +158,10 @@ namespace PET_HOSTEL
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Image = global::PET_HOSTEL.Properties.Resources.close1;
-            this.button1.Location = new System.Drawing.Point(944, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 30);
-            this.button1.TabIndex = 44;
-            this.button1.Text = " ";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // upay
             // 
             this.upay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.upay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.upay.Image = ((System.Drawing.Image)(resources.GetObject("upay.Image")));
             this.upay.Location = new System.Drawing.Point(740, 384);
             this.upay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -172,6 +175,7 @@ namespace PET_HOSTEL
             // rocked
             // 
             this.rocked.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rocked.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rocked.Image = ((System.Drawing.Image)(resources.GetObject("rocked.Image")));
             this.rocked.Location = new System.Drawing.Point(518, 384);
             this.rocked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -185,6 +189,7 @@ namespace PET_HOSTEL
             // nogod
             // 
             this.nogod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nogod.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nogod.Image = ((System.Drawing.Image)(resources.GetObject("nogod.Image")));
             this.nogod.Location = new System.Drawing.Point(295, 384);
             this.nogod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -198,6 +203,7 @@ namespace PET_HOSTEL
             // bkash
             // 
             this.bkash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bkash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bkash.Image = ((System.Drawing.Image)(resources.GetObject("bkash.Image")));
             this.bkash.Location = new System.Drawing.Point(75, 384);
             this.bkash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -211,6 +217,7 @@ namespace PET_HOSTEL
             // payPal
             // 
             this.payPal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.payPal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.payPal.Image = ((System.Drawing.Image)(resources.GetObject("payPal.Image")));
             this.payPal.Location = new System.Drawing.Point(518, 246);
             this.payPal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -224,6 +231,7 @@ namespace PET_HOSTEL
             // masterCard
             // 
             this.masterCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.masterCard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.masterCard.Image = ((System.Drawing.Image)(resources.GetObject("masterCard.Image")));
             this.masterCard.Location = new System.Drawing.Point(295, 246);
             this.masterCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -237,6 +245,7 @@ namespace PET_HOSTEL
             // visa
             // 
             this.visa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.visa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.visa.Image = ((System.Drawing.Image)(resources.GetObject("visa.Image")));
             this.visa.Location = new System.Drawing.Point(75, 246);
             this.visa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

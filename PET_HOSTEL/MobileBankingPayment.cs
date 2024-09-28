@@ -14,14 +14,16 @@ namespace PET_HOSTEL
 {
     public partial class MobileBankingPayment : Form
     {
+        private SqlConnection connect;
 
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
-        // SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
         private bool isPaymentConfirmed = false;
 
         public MobileBankingPayment()
         {
             InitializeComponent();
+            DataAccess dataAccess = new DataAccess();
+            connect = new SqlConnection(dataAccess.GetConnectionString());
+
         }
 
         private void btn_Confirm_Click(object sender, EventArgs e)
@@ -183,6 +185,11 @@ namespace PET_HOSTEL
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txt_Username_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

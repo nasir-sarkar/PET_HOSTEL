@@ -60,8 +60,11 @@ namespace PET_HOSTEL
             this.signup_dob = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_UsernameSearch = new System.Windows.Forms.TextBox();
             this.btn_Show = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,9 +77,6 @@ namespace PET_HOSTEL
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_usertype = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.loginDataaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -87,11 +87,11 @@ namespace PET_HOSTEL
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databasePetHostelDataSet)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource3)).BeginInit();
@@ -402,6 +402,16 @@ namespace PET_HOSTEL
             this.panel1.Size = new System.Drawing.Size(241, 627);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PET_HOSTEL.Properties.Resources.Exit;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 573);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(56, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 42;
+            this.pictureBox3.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -423,6 +433,30 @@ namespace PET_HOSTEL
             this.label4.Size = new System.Drawing.Size(205, 34);
             this.label4.TabIndex = 44;
             this.label4.Text = "Welcome, Admin";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PET_HOSTEL.Properties.Resources.pet_shop_center_icon_24877_3880;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 79);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox2.Image = global::PET_HOSTEL.Properties.Resources.algorithm;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 355);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
             // 
             // txt_UsernameSearch
             // 
@@ -602,40 +636,6 @@ namespace PET_HOSTEL
             this.txt_usertype.Text = " ";
             this.txt_usertype.TextChanged += new System.EventHandler(this.txt_usertype_TextChanged_1);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PET_HOSTEL.Properties.Resources.Exit;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 573);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(56, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 42;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PET_HOSTEL.Properties.Resources.pet_shop_center_icon_24877_3880;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox2.Image = global::PET_HOSTEL.Properties.Resources.algorithm;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 355);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
-            // 
             // adminBindingSource
             // 
             this.adminBindingSource.DataMember = "admin";
@@ -687,13 +687,13 @@ namespace PET_HOSTEL
             ((System.ComponentModel.ISupportInitialize)(this.databasePetHostelDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource3)).EndInit();

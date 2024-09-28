@@ -63,5 +63,20 @@ namespace PET_HOSTEL
             MobileBankingPayment d = new MobileBankingPayment();
             d.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CardPayment f = new CardPayment();
+            f.Show();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            
+                UserPanel userpnl = new UserPanel();
+                userpnl.Show();
+                this.Hide();
+            
+        }
     }
 }

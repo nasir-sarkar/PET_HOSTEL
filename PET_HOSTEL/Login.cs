@@ -95,15 +95,12 @@ namespace PET_HOSTEL
                             }
                             else if (userType == 0)
                             {
-<<<<<<< HEAD
 
                               AdminPanel adminPanel = new AdminPanel();
                                 adminPanel.Show();
-=======
                               AdminPanel ad=new AdminPanel();
                                 ad.Show();
                                 this.Hide();
->>>>>>> 0bd3a038f08d61242022148a2d29b260138b3ce8
                             }
                             else
                             {

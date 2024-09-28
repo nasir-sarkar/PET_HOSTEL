@@ -14,11 +14,9 @@ namespace PET_HOSTEL
 {
     public partial class MobileBankingPayment : Form
     {
-<<<<<<< HEAD
+
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
-=======
-        SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
->>>>>>> 0bd3a038f08d61242022148a2d29b260138b3ce8
+        // SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
         private bool isPaymentConfirmed = false;
 
         public MobileBankingPayment()

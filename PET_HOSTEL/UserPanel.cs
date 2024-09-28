@@ -88,26 +88,7 @@ namespace PET_HOSTEL
 
             if (days > 0)
             {
-                if (days <= 5)
-                {
-                    totalAmount += 400;
-                }
-                else if (days <= 10)
-                {
-                    totalAmount += 800;
-                }
-                else if (days <= 15)
-                {
-                    totalAmount += 1200;
-                }
-                else if (days <= 20)
-                {
-                    totalAmount += 1600;
-                }
-                else if (days <= 30)
-                {
-                    totalAmount += 2000;
-                }
+                totalAmount += days * 300;
             }
 
 
@@ -261,26 +242,7 @@ namespace PET_HOSTEL
 
             if (days > 0)
             {
-                if (days <= 5)
-                {
-                    totalAmount += 400;
-                }
-                else if (days <= 10)
-                {
-                    totalAmount += 800;
-                }
-                else if (days <= 15)
-                {
-                    totalAmount += 1200;
-                }
-                else if (days <= 20)
-                {
-                    totalAmount += 1600;
-                }
-                else if (days <= 30)
-                {
-                    totalAmount += 2000;
-                }
+                totalAmount += days * 300;
             }
 
           

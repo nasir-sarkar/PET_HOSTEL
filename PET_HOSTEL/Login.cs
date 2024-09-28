@@ -14,7 +14,7 @@ namespace PET_HOSTEL
     public partial class Login: Form
     {
 
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OOP2_PROJECT\PET_HOSTEL\PET_HOSTEL\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\naimur\OneDrive\Documents\logindata.mdf;Integrated Security = True; Connect Timeout = 30; Encrypt=false");
         public Login()
         {
             InitializeComponent();
@@ -91,10 +91,13 @@ namespace PET_HOSTEL
 
                                 UserPanel userPanel = new UserPanel();
                                 userPanel.Show();
+                                this.Hide();
                             }
                             else if (userType == 0)
                             {
-                              
+                              AdminPanel ad=new AdminPanel();
+                                ad.Show();
+                                this.Hide();
                             }
                             else
                             {
@@ -159,6 +162,12 @@ namespace PET_HOSTEL
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void fb_Click(object sender, EventArgs e)
+        {
+            ResetPass rp = new ResetPass();
+            this.Hide(); rp.Show();
         }
     }
 }

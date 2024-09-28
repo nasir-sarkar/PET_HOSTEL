@@ -218,5 +218,14 @@ namespace PET_HOSTEL
         {
 
         }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            signup_email.Text = "";
+            signup_username.Text = "";
+            signup_password.Text = "";
+            confirm_password.Text = "";
+            signup_dob.Value = DateTime.Now;
+        }
     }
 }

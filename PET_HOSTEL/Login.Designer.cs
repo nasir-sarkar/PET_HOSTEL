@@ -138,7 +138,7 @@ namespace PET_HOSTEL
             this.login_Back.Location = new System.Drawing.Point(998, 14);
             this.login_Back.Name = "login_Back";
             this.login_Back.Size = new System.Drawing.Size(125, 40);
-            this.login_Back.TabIndex = 3;
+            this.login_Back.TabIndex = 5;
             this.login_Back.Text = "Back";
             this.login_Back.UseVisualStyleBackColor = false;
             this.login_Back.Click += new System.EventHandler(this.button1_Click);
@@ -163,7 +163,7 @@ namespace PET_HOSTEL
             this.button_Join.Location = new System.Drawing.Point(919, 335);
             this.button_Join.Name = "button_Join";
             this.button_Join.Size = new System.Drawing.Size(132, 40);
-            this.button_Join.TabIndex = 3;
+            this.button_Join.TabIndex = 4;
             this.button_Join.Text = "Join";
             this.button_Join.UseVisualStyleBackColor = false;
             this.button_Join.Click += new System.EventHandler(this.button_Join_Click);
@@ -209,7 +209,7 @@ namespace PET_HOSTEL
             this.fb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fb.Name = "fb";
             this.fb.Size = new System.Drawing.Size(398, 46);
-            this.fb.TabIndex = 75;
+            this.fb.TabIndex = 3;
             this.fb.Text = "Forget Password?";
             this.fb.UseVisualStyleBackColor = true;
             this.fb.Click += new System.EventHandler(this.fb_Click);

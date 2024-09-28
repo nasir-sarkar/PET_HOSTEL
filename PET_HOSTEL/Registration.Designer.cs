@@ -31,6 +31,7 @@ namespace PET_HOSTEL
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.confirm_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@ namespace PET_HOSTEL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btn_clear);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.confirm_password);
             this.panel1.Controls.Add(this.label4);
@@ -78,6 +80,20 @@ namespace PET_HOSTEL
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Location = new System.Drawing.Point(683, 472);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(121, 36);
+            this.btn_clear.TabIndex = 32;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -99,7 +115,7 @@ namespace PET_HOSTEL
             this.confirm_password.Name = "confirm_password";
             this.confirm_password.PasswordChar = '*';
             this.confirm_password.Size = new System.Drawing.Size(428, 32);
-            this.confirm_password.TabIndex = 30;
+            this.confirm_password.TabIndex = 4;
             this.confirm_password.TextChanged += new System.EventHandler(this.confirm_password_TextChanged);
             // 
             // label4
@@ -129,7 +145,7 @@ namespace PET_HOSTEL
             this.signup_dob.Location = new System.Drawing.Point(529, 257);
             this.signup_dob.Name = "signup_dob";
             this.signup_dob.Size = new System.Drawing.Size(428, 26);
-            this.signup_dob.TabIndex = 27;
+            this.signup_dob.TabIndex = 2;
             this.signup_dob.ValueChanged += new System.EventHandler(this.signup_dob_ValueChanged);
             // 
             // label5
@@ -158,10 +174,10 @@ namespace PET_HOSTEL
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(664, 472);
+            this.button1.Location = new System.Drawing.Point(836, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 36);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -175,7 +191,7 @@ namespace PET_HOSTEL
             this.signup_password.Name = "signup_password";
             this.signup_password.PasswordChar = '*';
             this.signup_password.Size = new System.Drawing.Size(428, 32);
-            this.signup_password.TabIndex = 20;
+            this.signup_password.TabIndex = 3;
             this.signup_password.TextChanged += new System.EventHandler(this.signup_password_TextChanged);
             // 
             // label6
@@ -217,10 +233,10 @@ namespace PET_HOSTEL
             this.signup_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signup_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_btn.ForeColor = System.Drawing.Color.White;
-            this.signup_btn.Location = new System.Drawing.Point(529, 472);
+            this.signup_btn.Location = new System.Drawing.Point(530, 472);
             this.signup_btn.Name = "signup_btn";
             this.signup_btn.Size = new System.Drawing.Size(121, 36);
-            this.signup_btn.TabIndex = 14;
+            this.signup_btn.TabIndex = 5;
             this.signup_btn.Text = "Signup";
             this.signup_btn.UseVisualStyleBackColor = false;
             this.signup_btn.Click += new System.EventHandler(this.signup_btn_Click);
@@ -233,7 +249,7 @@ namespace PET_HOSTEL
             this.signup_username.Multiline = true;
             this.signup_username.Name = "signup_username";
             this.signup_username.Size = new System.Drawing.Size(428, 32);
-            this.signup_username.TabIndex = 13;
+            this.signup_username.TabIndex = 1;
             this.signup_username.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -255,7 +271,7 @@ namespace PET_HOSTEL
             this.signup_email.Multiline = true;
             this.signup_email.Name = "signup_email";
             this.signup_email.Size = new System.Drawing.Size(428, 32);
-            this.signup_email.TabIndex = 11;
+            this.signup_email.TabIndex = 0;
             this.signup_email.TextChanged += new System.EventHandler(this.signup_email_TextChanged);
             // 
             // label2
@@ -306,5 +322,6 @@ namespace PET_HOSTEL
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox confirm_showPass;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

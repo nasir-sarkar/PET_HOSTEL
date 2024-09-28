@@ -37,13 +37,13 @@ namespace PET_HOSTEL
             this.login_btn = new System.Windows.Forms.Button();
             this.login_showPass = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_Join = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login_Back = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button_Join = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.fb = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -134,44 +134,6 @@ namespace PET_HOSTEL
             this.panel3.Size = new System.Drawing.Size(1316, 90);
             this.panel3.TabIndex = 4;
             // 
-            // button_Join
-            // 
-            this.button_Join.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Join.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Join.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Join.Location = new System.Drawing.Point(1034, 419);
-            this.button_Join.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button_Join.Name = "button_Join";
-            this.button_Join.Size = new System.Drawing.Size(149, 50);
-            this.button_Join.TabIndex = 3;
-            this.button_Join.Text = "Join";
-            this.button_Join.UseVisualStyleBackColor = false;
-            this.button_Join.Click += new System.EventHandler(this.button_Join_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(541, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(311, 48);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "PAWS AND STAY";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(90, 98);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(529, 605);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // login_Back
             // 
             this.login_Back.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -186,6 +148,44 @@ namespace PET_HOSTEL
             this.login_Back.Text = "Back";
             this.login_Back.UseVisualStyleBackColor = false;
             this.login_Back.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(541, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(311, 48);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "PAWS AND STAY";
+            // 
+            // button_Join
+            // 
+            this.button_Join.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Join.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Join.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Join.Location = new System.Drawing.Point(1034, 419);
+            this.button_Join.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_Join.Name = "button_Join";
+            this.button_Join.Size = new System.Drawing.Size(149, 50);
+            this.button_Join.TabIndex = 3;
+            this.button_Join.Text = "Join";
+            this.button_Join.UseVisualStyleBackColor = false;
+            this.button_Join.Click += new System.EventHandler(this.button_Join_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(90, 98);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(529, 605);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -209,16 +209,6 @@ namespace PET_HOSTEL
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(558, 784);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(292, 21);
-            this.label10.TabIndex = 74;
-            this.label10.Text = "Your Pet\'s Comfort is our Privacy";
-            // 
             // fb
             // 
             this.fb.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -231,6 +221,16 @@ namespace PET_HOSTEL
             this.fb.Text = "Forget Password?";
             this.fb.UseVisualStyleBackColor = true;
             this.fb.Click += new System.EventHandler(this.fb_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(558, 784);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(284, 21);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "Your Pet\'s Comfort is our Priority";
             // 
             // Login
             // 

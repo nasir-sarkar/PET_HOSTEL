@@ -14,7 +14,7 @@ namespace PET_HOSTEL
     public partial class Login: Form
     {
 
-        SqlConnection connect = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\naimur\OneDrive\Documents\logindata.mdf;Integrated Security = True; Connect Timeout = 30; Encrypt=false");
+        SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False ");
         public Login()
         {
             InitializeComponent();
@@ -166,8 +166,8 @@ namespace PET_HOSTEL
 
         private void fb_Click(object sender, EventArgs e)
         {
-            ResetPass rp = new ResetPass();
-            this.Hide(); rp.Show();
+            //ResetPass rp = new ResetPass();
+           // this.Hide(); rp.Show();
         }
     }
 }

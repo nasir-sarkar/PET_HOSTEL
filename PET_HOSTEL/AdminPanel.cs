@@ -15,7 +15,7 @@ namespace PET_HOSTEL
 {
     public partial class AdminPanel : Form
     {      
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OOP2_PROJECT\PET_HOSTEL\PET_HOSTEL\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30";
+        private readonly string connectionString = @"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False ";
    
         public AdminPanel()
         {

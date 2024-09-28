@@ -42,7 +42,9 @@ namespace PET_HOSTEL
             this.text_Card = new System.Windows.Forms.TextBox();
             this.button_Print = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Confirm
@@ -105,6 +107,7 @@ namespace PET_HOSTEL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -173,6 +176,17 @@ namespace PET_HOSTEL
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PET_HOSTEL.Properties.Resources.close;
+            this.pictureBox1.Location = new System.Drawing.Point(652, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MobileBankingPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,6 +211,7 @@ namespace PET_HOSTEL
             this.Load += new System.EventHandler(this.MobileBankingPayment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +232,6 @@ namespace PET_HOSTEL
         private System.Windows.Forms.TextBox text_Card;
         private System.Windows.Forms.Button button_Print;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

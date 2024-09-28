@@ -142,7 +142,7 @@ namespace PET_HOSTEL
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(551, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 30);
+            this.label1.Size = new System.Drawing.Size(242, 29);
             this.label1.TabIndex = 18;
             this.label1.Text = "Become a Member..";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -152,7 +152,7 @@ namespace PET_HOSTEL
             this.signup_showPass.AutoSize = true;
             this.signup_showPass.Location = new System.Drawing.Point(861, 344);
             this.signup_showPass.Name = "signup_showPass";
-            this.signup_showPass.Size = new System.Drawing.Size(129, 21);
+            this.signup_showPass.Size = new System.Drawing.Size(125, 20);
             this.signup_showPass.TabIndex = 15;
             this.signup_showPass.Text = "Show Password";
             this.signup_showPass.UseVisualStyleBackColor = true;

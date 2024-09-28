@@ -14,7 +14,7 @@ namespace PET_HOSTEL
 {
     public partial class Registration : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OOP2_PROJECT\PET_HOSTEL\PET_HOSTEL\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Registration()
         {
@@ -62,6 +62,10 @@ namespace PET_HOSTEL
             else if (signup_password.Text.Length < 6)
             {
                 MessageBox.Show("Password must be at least 6 characters long", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (signup_password.Text != confirm_password.Text)
+            {
+                MessageBox.Show("Confirm Password must be the same as Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if ((DateTime.Now.Year - signup_dob.Value.Year) < 15 ||
              (DateTime.Now.Year - signup_dob.Value.Year == 15 && DateTime.Now.DayOfYear < signup_dob.Value.DayOfYear))
@@ -188,6 +192,23 @@ namespace PET_HOSTEL
         private void signup_dob_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void confirm_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirm_showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (confirm_showPass.Checked)
+            {
+                confirm_password.PasswordChar = '\0';
+            }
+            else
+            {
+                confirm_password.PasswordChar = '*';
+            }
         }
     }
 }

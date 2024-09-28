@@ -88,6 +88,12 @@ namespace PET_HOSTEL
                             DataRow row = table.Rows[0];
                             int userType = Convert.ToInt32(row["usertype"]);
 
+                            string updateLoginStatus = "UPDATE admin SET login_status = 1 WHERE username = @username";
+                            using (SqlCommand updateCmd = new SqlCommand(updateLoginStatus, connect))
+                            {
+                                updateCmd.Parameters.AddWithValue("@username", login_username.Text.Trim());
+                                updateCmd.ExecuteNonQuery();
+                            }
 
                             if (userType == 1)
                             {

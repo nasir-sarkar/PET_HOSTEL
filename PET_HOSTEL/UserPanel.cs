@@ -186,6 +186,23 @@ namespace PET_HOSTEL
 
         private void button_Logout_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connect.Open();
+                string query = "UPDATE admin SET login_status = 0 WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.Parameters.AddWithValue("@username", username.Text);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
             Login lForm1 = new Login();
             lForm1.Show();
             this.Hide();
@@ -204,9 +221,39 @@ namespace PET_HOSTEL
                 return;
             }
 
-            int totalAmount = 0;
+            int loginStatus = 0;
+            try
+            {
+                connect.Open();
+                string query = "SELECT login_status FROM admin WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.Parameters.AddWithValue("@username", username.Text);
 
-            
+                var result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    loginStatus = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                connect.Close();
+            }
+           
+            if (loginStatus != 1)
+            {
+                MessageBox.Show("You must be logged in to check the total amount.");
+                return;
+            }
+
+
+            int totalAmount = 0;
+           
             switch (petType.SelectedItem.ToString())
             {
                 case "Cat": totalAmount += 600; break;

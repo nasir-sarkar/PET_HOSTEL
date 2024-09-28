@@ -147,7 +147,7 @@ namespace PET_HOSTEL
 
                     MessageBox.Show(printDetails, "Payment Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    string filePath = $@"D:\OOP2PROJECT\Receipts\{username}_PaymentReceipt.txt";
+                    string filePath = $@"D:\Receipts\{username}_PaymentReceipt.txt";
 
 
                     Directory.CreateDirectory(@"C:\Receipts");

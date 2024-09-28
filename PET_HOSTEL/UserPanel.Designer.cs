@@ -133,7 +133,7 @@ namespace PET_HOSTEL
             this.injectionStatus.Location = new System.Drawing.Point(488, 269);
             this.injectionStatus.Name = "injectionStatus";
             this.injectionStatus.Size = new System.Drawing.Size(198, 28);
-            this.injectionStatus.TabIndex = 54;
+            this.injectionStatus.TabIndex = 3;
             // 
             // checkoutDate
             // 
@@ -141,7 +141,7 @@ namespace PET_HOSTEL
             this.checkoutDate.Location = new System.Drawing.Point(907, 222);
             this.checkoutDate.Name = "checkoutDate";
             this.checkoutDate.Size = new System.Drawing.Size(200, 27);
-            this.checkoutDate.TabIndex = 53;
+            this.checkoutDate.TabIndex = 6;
             // 
             // startDate
             // 
@@ -149,7 +149,7 @@ namespace PET_HOSTEL
             this.startDate.Location = new System.Drawing.Point(907, 179);
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(200, 27);
-            this.startDate.TabIndex = 52;
+            this.startDate.TabIndex = 5;
             this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // age
@@ -165,7 +165,7 @@ namespace PET_HOSTEL
             this.age.Location = new System.Drawing.Point(487, 224);
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(198, 28);
-            this.age.TabIndex = 51;
+            this.age.TabIndex = 2;
             // 
             // medicineNeeded
             // 
@@ -177,7 +177,7 @@ namespace PET_HOSTEL
             this.medicineNeeded.Location = new System.Drawing.Point(907, 135);
             this.medicineNeeded.Name = "medicineNeeded";
             this.medicineNeeded.Size = new System.Drawing.Size(200, 28);
-            this.medicineNeeded.TabIndex = 50;
+            this.medicineNeeded.TabIndex = 4;
             // 
             // petType
             // 
@@ -194,7 +194,7 @@ namespace PET_HOSTEL
             this.petType.Location = new System.Drawing.Point(488, 181);
             this.petType.Name = "petType";
             this.petType.Size = new System.Drawing.Size(198, 28);
-            this.petType.TabIndex = 49;
+            this.petType.TabIndex = 1;
             // 
             // button_Next
             // 
@@ -205,7 +205,7 @@ namespace PET_HOSTEL
             this.button_Next.Location = new System.Drawing.Point(467, 331);
             this.button_Next.Name = "button_Next";
             this.button_Next.Size = new System.Drawing.Size(275, 36);
-            this.button_Next.TabIndex = 48;
+            this.button_Next.TabIndex = 8;
             this.button_Next.Text = "Pay For Booking";
             this.button_Next.UseVisualStyleBackColor = false;
             this.button_Next.Click += new System.EventHandler(this.button_Next_Click);
@@ -227,7 +227,7 @@ namespace PET_HOSTEL
             this.username.Location = new System.Drawing.Point(487, 134);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(198, 27);
-            this.username.TabIndex = 63;
+            this.username.TabIndex = 0;
             this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
             // button_Clear
@@ -239,7 +239,7 @@ namespace PET_HOSTEL
             this.button_Clear.Location = new System.Drawing.Point(738, 331);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(275, 36);
-            this.button_Clear.TabIndex = 65;
+            this.button_Clear.TabIndex = 9;
             this.button_Clear.Text = "Cancel Booking";
             this.button_Clear.UseVisualStyleBackColor = false;
             this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
@@ -307,7 +307,7 @@ namespace PET_HOSTEL
             this.button_Logout.Location = new System.Drawing.Point(739, 12);
             this.button_Logout.Name = "button_Logout";
             this.button_Logout.Size = new System.Drawing.Size(90, 31);
-            this.button_Logout.TabIndex = 0;
+            this.button_Logout.TabIndex = 10;
             this.button_Logout.Text = "Logout";
             this.button_Logout.UseVisualStyleBackColor = false;
             this.button_Logout.Click += new System.EventHandler(this.button_Logout_Click);
@@ -321,7 +321,7 @@ namespace PET_HOSTEL
             this.btn_CheckTotal.Location = new System.Drawing.Point(907, 261);
             this.btn_CheckTotal.Name = "btn_CheckTotal";
             this.btn_CheckTotal.Size = new System.Drawing.Size(200, 36);
-            this.btn_CheckTotal.TabIndex = 72;
+            this.btn_CheckTotal.TabIndex = 7;
             this.btn_CheckTotal.Text = "Check Total";
             this.btn_CheckTotal.UseVisualStyleBackColor = false;
             this.btn_CheckTotal.Click += new System.EventHandler(this.btn_CheckTotal_Click);

@@ -14,7 +14,7 @@ namespace PET_HOSTEL
     public partial class Login: Form
     {
 
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OOP2_PROJECT\PET_HOSTEL\PET_HOSTEL\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
         public Login()
         {
             InitializeComponent();
@@ -95,8 +95,8 @@ namespace PET_HOSTEL
                             else if (userType == 0)
                             {
 
-                             //   AdminPanel adminPanel = new AdminPanel();
-                                //adminPanel.Show();
+                              AdminPanel adminPanel = new AdminPanel();
+                                adminPanel.Show();
                             }
                             else
                             {

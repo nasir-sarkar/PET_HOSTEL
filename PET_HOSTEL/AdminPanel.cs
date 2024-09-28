@@ -15,7 +15,7 @@ namespace PET_HOSTEL
 {
     public partial class AdminPanel : Form
     {      
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OOP2_PROJECT\PET_HOSTEL\PET_HOSTEL\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30";
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
    
         public AdminPanel()
         {
@@ -345,6 +345,28 @@ namespace PET_HOSTEL
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
+
+        private void txt_usertype_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        private void panel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

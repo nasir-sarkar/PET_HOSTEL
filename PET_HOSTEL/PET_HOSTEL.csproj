@@ -96,6 +96,7 @@
     <Compile Include="PaymentMethod.Designer.cs">
       <DependentUpon>PaymentMethod.cs</DependentUpon>
     </Compile>
+    <Compile Include="PetHostelDataAccess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.cs">

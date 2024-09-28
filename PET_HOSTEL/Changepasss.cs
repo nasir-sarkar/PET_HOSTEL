@@ -49,7 +49,11 @@ namespace PET_HOSTEL
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Password updated successfully!");
-                            this.Close(); // Close the form after update
+                            
+                            Login login = new Login();
+                            login.Show();
+                            this.Hide();
+
                         }
                         else
                         {

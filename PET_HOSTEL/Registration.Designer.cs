@@ -31,6 +31,7 @@ namespace PET_HOSTEL
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.confirm_password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.confirm_showPass = new System.Windows.Forms.CheckBox();
@@ -47,7 +48,6 @@ namespace PET_HOSTEL
             this.label3 = new System.Windows.Forms.Label();
             this.signup_email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,18 @@ namespace PET_HOSTEL
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(525, 365);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(299, 20);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Password must be at least 6 characters long.";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // confirm_password
             // 
             this.confirm_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -85,7 +97,7 @@ namespace PET_HOSTEL
             this.confirm_password.Location = new System.Drawing.Point(529, 423);
             this.confirm_password.Multiline = true;
             this.confirm_password.Name = "confirm_password";
-            this.confirm_password.PasswordChar = 'x';
+            this.confirm_password.PasswordChar = '*';
             this.confirm_password.Size = new System.Drawing.Size(428, 32);
             this.confirm_password.TabIndex = 30;
             this.confirm_password.TextChanged += new System.EventHandler(this.confirm_password_TextChanged);
@@ -161,7 +173,7 @@ namespace PET_HOSTEL
             this.signup_password.Location = new System.Drawing.Point(530, 330);
             this.signup_password.Multiline = true;
             this.signup_password.Name = "signup_password";
-            this.signup_password.PasswordChar = 'x';
+            this.signup_password.PasswordChar = '*';
             this.signup_password.Size = new System.Drawing.Size(428, 32);
             this.signup_password.TabIndex = 20;
             this.signup_password.TextChanged += new System.EventHandler(this.signup_password_TextChanged);
@@ -256,18 +268,6 @@ namespace PET_HOSTEL
             this.label2.TabIndex = 10;
             this.label2.Text = "Email:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(525, 365);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(299, 20);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Password must be at least 6 characters long.";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Registration
             // 

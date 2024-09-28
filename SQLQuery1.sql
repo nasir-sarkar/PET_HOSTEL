@@ -1,6 +1,4 @@
-﻿drop table admin
-
-CREATE TABLE admin
+﻿CREATE TABLE admin
 (
   id INT PRIMARY KEY IDENTITY (1,1),
   username VARCHAR (MAX) NULL,
@@ -17,6 +15,5 @@ CREATE TABLE admin
   payment_status VARCHAR (MAX) NULL,
   date_created DATE NULL,
   usertype INT DEFAULT ((1)) NOT NULL,
+  login_status INT DEFAULT ((0)) NOT NULL,
 )
-
-select * from admin

@@ -79,6 +79,7 @@
     <Compile Include="Changepasss.Designer.cs">
       <DependentUpon>Changepasss.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="DatabasePetHostelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

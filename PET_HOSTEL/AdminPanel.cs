@@ -14,15 +14,19 @@ using System.Text.RegularExpressions;
 namespace PET_HOSTEL
 {
     public partial class AdminPanel : Form
-    {      
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False";
-   
+    {
+
+
+        private readonly string connectionString;
+
+
         public AdminPanel()
         {
             InitializeComponent();
-            ShowAdminData(); 
+            DataAccess dataAccess = new DataAccess();
+            connectionString = dataAccess.GetConnectionString();
+            ShowAdminData();
         }
-     
         private void ShowAdminData()
         {
             try

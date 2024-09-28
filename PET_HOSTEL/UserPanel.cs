@@ -247,7 +247,7 @@ namespace PET_HOSTEL
            
             if (loginStatus != 1)
             {
-                MessageBox.Show("You must be logged in to check the total amount.");
+                MessageBox.Show("Please insert your correct username.");
                 return;
             }
 

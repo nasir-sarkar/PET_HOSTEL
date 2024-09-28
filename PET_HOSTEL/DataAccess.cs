@@ -30,7 +30,7 @@ namespace PET_HOSTEL
 
             
 
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP2_PROJECT\\PET_HOSTEL\\PET_HOSTEL\\DatabasePetHostel.mdf;Integrated Security=True;Connect Timeout=30";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\FINAL_PROJECT_Database\\PetHostelDatabase.mdf;Integrated Security=True;Connect Timeout=30";
 
         }
 

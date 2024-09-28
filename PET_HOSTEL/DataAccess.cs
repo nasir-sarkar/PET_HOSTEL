@@ -43,9 +43,6 @@ namespace PET_HOSTEL
             return connectionString;
 
         }
-
-        
-
         public void ConnectToDatabase()
 
         {

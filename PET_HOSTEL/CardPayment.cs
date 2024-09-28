@@ -9,18 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Contexts;
 
 namespace PET_HOSTEL
 {
     public partial class CardPayment : Form
     {
-        SqlConnection connect = new SqlConnection(@" Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
-       // SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
+        private SqlConnection connect;
         private bool isPaymentConfirmed = false;
 
         public CardPayment()
         {
             InitializeComponent();
+            DataAccess dataAccess = new DataAccess();
+            connect = new SqlConnection(dataAccess.GetConnectionString());
+
         }
 
         private void btn_Confirm_Click(object sender, EventArgs e)

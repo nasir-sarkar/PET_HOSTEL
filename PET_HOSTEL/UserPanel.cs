@@ -83,9 +83,13 @@ namespace PET_HOSTEL
                 totalAmount += 300;
             }
 
-            TimeSpan dateDifference = checkoutDate.Value - startDate.Value;
-            int days = (int)dateDifference.TotalDays;
+            TimeSpan dateDifference = checkoutDate.Value.Date - startDate.Value.Date;
+            int days = dateDifference.Days;
 
+            if (days == 0)
+            {
+                days = 1;
+            }
             if (days > 0)
             {
                 totalAmount += days * 300;
@@ -236,16 +240,20 @@ namespace PET_HOSTEL
                 totalAmount += 300;
             }
 
-          
-            TimeSpan dateDifference = checkoutDate.Value - startDate.Value;
-            int days = (int)dateDifference.TotalDays;
 
+            TimeSpan dateDifference = checkoutDate.Value.Date - startDate.Value.Date;
+            int days = dateDifference.Days;
+
+            if (days == 0)
+            {
+                days = 1;
+            }
             if (days > 0)
             {
                 totalAmount += days * 300;
             }
 
-          
+
             MessageBox.Show($"Total Amount: {totalAmount} Taka", "Total Amount", MessageBoxButtons.OK, MessageBoxIcon.Information);        
             isTotalChecked = true;
         }

@@ -75,7 +75,7 @@ namespace PET_HOSTEL
 
             if (injectionStatus.SelectedItem.ToString() == "No")
             {
-                totalAmount += 200;
+                totalAmount += 500;
             }
 
             if (medicineNeeded.SelectedItem.ToString() == "Yes")
@@ -227,7 +227,7 @@ namespace PET_HOSTEL
           
             if (injectionStatus.SelectedItem.ToString() == "No")
             {
-                totalAmount += 200;
+                totalAmount += 500;
             }
 
           

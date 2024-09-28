@@ -80,14 +80,15 @@ namespace PET_HOSTEL
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 71);
+            this.panel1.Size = new System.Drawing.Size(1165, 61);
             this.panel1.TabIndex = 2;
             // 
             // btnClose
@@ -124,32 +125,33 @@ namespace PET_HOSTEL
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 307);
+            this.panel2.Location = new System.Drawing.Point(0, 279);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 348);
+            this.panel2.Size = new System.Drawing.Size(1165, 376);
             this.panel2.TabIndex = 0;
             // 
             // btn_Continue
             // 
+            this.btn_Continue.BackColor = System.Drawing.Color.White;
             this.btn_Continue.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Continue.Location = new System.Drawing.Point(391, 237);
+            this.btn_Continue.Location = new System.Drawing.Point(391, 249);
             this.btn_Continue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Continue.Name = "btn_Continue";
             this.btn_Continue.Size = new System.Drawing.Size(373, 44);
             this.btn_Continue.TabIndex = 1;
             this.btn_Continue.Text = "Tap To Continue";
-            this.btn_Continue.UseVisualStyleBackColor = true;
+            this.btn_Continue.UseVisualStyleBackColor = false;
             this.btn_Continue.Click += new System.EventHandler(this.btn_Continue_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(521, 10);
+            this.label16.Location = new System.Drawing.Point(505, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 23);
+            this.label16.Size = new System.Drawing.Size(145, 23);
             this.label16.TabIndex = 9;
             this.label16.Text = "Group Members:";
             // 
@@ -290,7 +292,8 @@ namespace PET_HOSTEL
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 199);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(209, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 4;
@@ -300,7 +303,8 @@ namespace PET_HOSTEL
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(317, 229);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(209, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 5;
@@ -310,7 +314,8 @@ namespace PET_HOSTEL
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(317, 139);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(209, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(357, 18);
             this.label4.TabIndex = 6;
@@ -320,7 +325,8 @@ namespace PET_HOSTEL
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(317, 169);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(209, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(220, 18);
             this.label5.TabIndex = 7;
@@ -330,7 +336,8 @@ namespace PET_HOSTEL
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(317, 109);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(209, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(303, 18);
             this.label6.TabIndex = 8;
@@ -341,8 +348,8 @@ namespace PET_HOSTEL
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(1016, 85);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(1019, 69);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 18);
             this.label7.TabIndex = 5;
@@ -353,8 +360,8 @@ namespace PET_HOSTEL
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(1007, 249);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(1010, 233);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(133, 18);
             this.label17.TabIndex = 10;
@@ -363,7 +370,7 @@ namespace PET_HOSTEL
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1010, 109);
+            this.pictureBox5.Location = new System.Drawing.Point(1013, 93);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(127, 138);
@@ -374,10 +381,10 @@ namespace PET_HOSTEL
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 107);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 69);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(311, 160);
+            this.pictureBox6.Size = new System.Drawing.Size(191, 182);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -386,7 +393,7 @@ namespace PET_HOSTEL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1165, 655);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label17);

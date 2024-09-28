@@ -91,12 +91,19 @@ namespace PET_HOSTEL
 
                                 UserPanel userPanel = new UserPanel();
                                 userPanel.Show();
+                                this.Hide();
                             }
                             else if (userType == 0)
                             {
+<<<<<<< HEAD
 
                               AdminPanel adminPanel = new AdminPanel();
                                 adminPanel.Show();
+=======
+                              AdminPanel ad=new AdminPanel();
+                                ad.Show();
+                                this.Hide();
+>>>>>>> 0bd3a038f08d61242022148a2d29b260138b3ce8
                             }
                             else
                             {
@@ -161,6 +168,12 @@ namespace PET_HOSTEL
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void fb_Click(object sender, EventArgs e)
+        {
+            //ResetPass rp = new ResetPass();
+           // this.Hide(); rp.Show();
         }
     }
 }

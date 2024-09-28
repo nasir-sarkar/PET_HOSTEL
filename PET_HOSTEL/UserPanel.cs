@@ -111,7 +111,7 @@ namespace PET_HOSTEL
             try
             {
                 connect.Open();
-                string query = "UPDATE admin SET pet = @pet, pet_age = @age, injection_status = @injectionStatus, medicine_needed = @medicineNeeded, start_date = @startDate, checkout_date = @checkoutDate, payment_amount = @totalAmount WHERE username = @username";
+                string query = "UPDATE admin SET pet = @pet, pet_age = @age, injection_status = @injectionStatus, medicine_needed = @medicineNeeded, start_date = @startDate, checkout_date = @checkoutDate, payment_amount = @totalAmount, payment_status = @paymentStatus WHERE username = @username";
 
                 SqlCommand cmd = new SqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@pet", petType.SelectedItem.ToString());
@@ -121,6 +121,7 @@ namespace PET_HOSTEL
                 cmd.Parameters.AddWithValue("@startDate", startDate.Value);
                 cmd.Parameters.AddWithValue("@checkoutDate", checkoutDate.Value);
                 cmd.Parameters.AddWithValue("@totalAmount", totalAmount);
+                cmd.Parameters.AddWithValue("@paymentStatus", "unpaid");
                 cmd.Parameters.AddWithValue("@username", username.Text);
 
                 int rowsAffected = cmd.ExecuteNonQuery();

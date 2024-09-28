@@ -14,7 +14,11 @@ namespace PET_HOSTEL
 {
     public partial class MobileBankingPayment : Form
     {
+<<<<<<< HEAD
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ABU JAFAR SISTY\Documents\pet hostel.mdf"";Integrated Security=True;Connect Timeout=30;Encrypt=False");
+=======
+        SqlConnection connect = new SqlConnection(@"Data Source=ISTIAQ\SQLEXPRESS;Integrated Security=True;Encrypt=False");
+>>>>>>> 0bd3a038f08d61242022148a2d29b260138b3ce8
         private bool isPaymentConfirmed = false;
 
         public MobileBankingPayment()
@@ -63,7 +67,12 @@ namespace PET_HOSTEL
 
                 if (paymentAmount == amount)
                 {
-                    MessageBox.Show("Payment confirmed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string updateQuery = "UPDATE admin SET payment_status = 'Paid' WHERE username = @username";
+                    SqlCommand updateCmd = new SqlCommand(updateQuery, connect);
+                    updateCmd.Parameters.AddWithValue("@username", txt_Username.Text);
+                    updateCmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Payment confirmed successfully and status updated to 'Paid'.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     isPaymentConfirmed = true;
                 }
                 else
@@ -171,6 +180,11 @@ namespace PET_HOSTEL
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
     

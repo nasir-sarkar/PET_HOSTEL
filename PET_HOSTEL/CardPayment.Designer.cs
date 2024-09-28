@@ -42,7 +42,9 @@ namespace PET_HOSTEL
             this.text_Amount = new System.Windows.Forms.TextBox();
             this.button_Print = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Confirm
@@ -64,7 +66,7 @@ namespace PET_HOSTEL
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(123, 291);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 17);
+            this.label3.Size = new System.Drawing.Size(29, 16);
             this.label3.TabIndex = 14;
             this.label3.Text = "Pin:";
             // 
@@ -73,7 +75,7 @@ namespace PET_HOSTEL
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(123, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "Card Number:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -83,7 +85,7 @@ namespace PET_HOSTEL
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(123, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Username:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -118,6 +120,7 @@ namespace PET_HOSTEL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -140,7 +143,7 @@ namespace PET_HOSTEL
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(123, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 17;
             this.label5.Text = "Amount:";
             // 
@@ -173,10 +176,21 @@ namespace PET_HOSTEL
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.Location = new System.Drawing.Point(540, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 34);
+            this.label6.Size = new System.Drawing.Size(113, 32);
             this.label6.TabIndex = 19;
             this.label6.Text = "Print receipt to get\r\nyour token";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PET_HOSTEL.Properties.Resources.close;
+            this.pictureBox1.Location = new System.Drawing.Point(652, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // CardPayment
             // 
@@ -202,6 +216,7 @@ namespace PET_HOSTEL
             this.Load += new System.EventHandler(this.CardPayment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +237,6 @@ namespace PET_HOSTEL
         private System.Windows.Forms.TextBox text_Amount;
         private System.Windows.Forms.Button button_Print;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

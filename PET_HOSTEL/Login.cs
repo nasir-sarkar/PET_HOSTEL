@@ -169,8 +169,8 @@ namespace PET_HOSTEL
 
         private void fb_Click(object sender, EventArgs e)
         {
-            //ResetPass rp = new ResetPass();
-           // this.Hide(); rp.Show();
+            ResetPass rp = new ResetPass();
+            this.Hide(); rp.Show();
         }
     }
 }

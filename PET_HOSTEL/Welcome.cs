@@ -35,6 +35,7 @@ namespace PET_HOSTEL
         private void btn_Continue_Click(object sender, EventArgs e)
         {   Loading z = new Loading();
             z.Show();
+            this.Hide();
         }
 
         private void Welcome_Load(object sender, EventArgs e)

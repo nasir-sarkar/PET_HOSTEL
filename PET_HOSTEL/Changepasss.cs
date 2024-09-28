@@ -14,12 +14,16 @@ namespace PET_HOSTEL
 {
     public partial class Changepasss : Form
     {
-        private readonly string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naimur\OneDrive\Documents\logindata.mdf;Integrated Security = True; Connect Timeout = 30; Encrypt=False";
+       
+        public string UserEmail { get; set; } 
+        private readonly string connectionString;
 
-        public string UserEmail { get; set; } // Property to hold the user's email
         public Changepasss()
         {
             InitializeComponent();
+
+            DataAccess dataAccess = new DataAccess();
+            connectionString = dataAccess.GetConnectionString();
         }
 
         private void updt_Click(object sender, EventArgs e)
@@ -30,7 +34,6 @@ namespace PET_HOSTEL
                 return;
             }
 
-            // Display the email for debugging
             MessageBox.Show($"Updating password for: {UserEmail}");
 
             // Update the password in the database
@@ -85,6 +88,11 @@ namespace PET_HOSTEL
             }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void npass_TextChanged(object sender, EventArgs e)
         {
 
         }

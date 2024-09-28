@@ -11,12 +11,13 @@ namespace PET_HOSTEL
         private string randomCode;
         public static string to;
 
-        // Database connection string
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\naimur\OneDrive\Documents\logindata.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False");
+        private SqlConnection connect;
 
         public ResetPass()
         {
             InitializeComponent();
+            DataAccess dataAccess = new DataAccess();
+            connect = new SqlConnection(dataAccess.GetConnectionString());
         }
 
         private void ResetPass_Load(object sender, EventArgs e)

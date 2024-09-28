@@ -67,12 +67,7 @@ namespace PET_HOSTEL
             return Regex.IsMatch(email, pattern);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login lForm1 = new Login();
-            lForm1.Show();
-            this.Hide();
-        }
+      
 
 
         private void AdminPanel_Load(object sender, EventArgs e)
@@ -329,13 +324,7 @@ namespace PET_HOSTEL
                 }
             }
         }
-
-        private void Back_Click(object sender, EventArgs e)
-        {
-            Login l = new Login();
-            l.Show();
-            this.Close();
-        }
+ 
 
         private void signup_showPass_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -353,5 +342,15 @@ namespace PET_HOSTEL
         {
             Application.Exit();
         }
+
+        private void Back_Click_1(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.Show();
+            
+        }
+
     }
 }

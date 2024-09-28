@@ -74,16 +74,16 @@ namespace PET_HOSTEL
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Updatee = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Back = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.loginDataaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Back = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource4)).BeginInit();
@@ -588,10 +588,10 @@ namespace PET_HOSTEL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.Back);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.Back);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.txt_UsernameSearch);
@@ -602,43 +602,6 @@ namespace PET_HOSTEL
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 655);
             this.panel1.TabIndex = 44;
-            // 
-            // Back
-            // 
-            this.Back.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.FlatAppearance.BorderSize = 0;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Back.Location = new System.Drawing.Point(58, 607);
-            this.Back.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(106, 39);
-            this.Back.TabIndex = 36;
-            this.Back.Text = "LogOut";
-            this.Back.UseVisualStyleBackColor = false;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button1.Image = global::PET_HOSTEL.Properties.Resources.icons8_multiply_16;
-            this.button1.Location = new System.Drawing.Point(1157, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 22);
-            this.button1.TabIndex = 46;
-            this.button1.Text = " ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox3
             // 
@@ -673,6 +636,26 @@ namespace PET_HOSTEL
             this.pictureBox2.TabIndex = 41;
             this.pictureBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.button1.Image = global::PET_HOSTEL.Properties.Resources.icons8_multiply_16;
+            this.button1.Location = new System.Drawing.Point(1157, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 22);
+            this.button1.TabIndex = 46;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // adminBindingSource
             // 
             this.adminBindingSource.DataMember = "admin";
@@ -688,6 +671,23 @@ namespace PET_HOSTEL
             // adminBindingSource1
             // 
             this.adminBindingSource1.DataMember = "admin";
+            // 
+            // Back
+            // 
+            this.Back.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back.FlatAppearance.BorderSize = 0;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Back.Location = new System.Drawing.Point(60, 607);
+            this.Back.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(106, 39);
+            this.Back.TabIndex = 45;
+            this.Back.Text = "LogOut";
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click_1);
             // 
             // AdminPanel
             // 
@@ -785,9 +785,9 @@ namespace PET_HOSTEL
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btn_Updatee;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.BindingSource adminBindingSource1;
         private System.Windows.Forms.Button btn_Uptate;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Back;
     }
 }

@@ -522,5 +522,10 @@ namespace PET_HOSTEL
                 signup_password.PasswordChar = '*';
             }
         }
+
+        private void signup_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

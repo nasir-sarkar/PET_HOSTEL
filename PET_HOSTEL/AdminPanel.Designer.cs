@@ -67,6 +67,7 @@ namespace PET_HOSTEL
             this.adminBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.databasePetHostelDataSet = new PET_HOSTEL.DatabasePetHostelDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_Uptate = new System.Windows.Forms.Button();
             this.txt_usertype = new System.Windows.Forms.TextBox();
             this.signup_password = new System.Windows.Forms.TextBox();
             this.signup_username = new System.Windows.Forms.TextBox();
@@ -83,7 +84,6 @@ namespace PET_HOSTEL
             this.adminBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_Uptate = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource4)).BeginInit();
@@ -147,22 +147,22 @@ namespace PET_HOSTEL
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Hobo Std", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(29, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(179, 45);
+            this.label9.Size = new System.Drawing.Size(173, 37);
             this.label9.TabIndex = 43;
             this.label9.Text = "Pet Hostel";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Hobo Std", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 34);
+            this.label4.Size = new System.Drawing.Size(209, 29);
             this.label4.TabIndex = 44;
             this.label4.Text = "Welcome, Admin";
             // 
@@ -314,11 +314,11 @@ namespace PET_HOSTEL
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Hobo Std", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label7.Location = new System.Drawing.Point(5, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(272, 34);
+            this.label7.Size = new System.Drawing.Size(271, 29);
             this.label7.TabIndex = 45;
             this.label7.Text = "Admin and Users Data";
             // 
@@ -507,6 +507,24 @@ namespace PET_HOSTEL
             this.panel4.Size = new System.Drawing.Size(918, 238);
             this.panel4.TabIndex = 47;
             // 
+            // btn_Uptate
+            // 
+            this.btn_Uptate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_Uptate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Uptate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(108)))), ((int)(((byte)(57)))));
+            this.btn_Uptate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(108)))), ((int)(((byte)(57)))));
+            this.btn_Uptate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Uptate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Uptate.ForeColor = System.Drawing.Color.White;
+            this.btn_Uptate.Location = new System.Drawing.Point(88, 182);
+            this.btn_Uptate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btn_Uptate.Name = "btn_Uptate";
+            this.btn_Uptate.Size = new System.Drawing.Size(90, 35);
+            this.btn_Uptate.TabIndex = 43;
+            this.btn_Uptate.Text = "Update";
+            this.btn_Uptate.UseVisualStyleBackColor = false;
+            this.btn_Uptate.Click += new System.EventHandler(this.btn_Uptate_Click_1);
+            // 
             // txt_usertype
             // 
             this.txt_usertype.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -530,6 +548,7 @@ namespace PET_HOSTEL
             this.signup_password.PasswordChar = 'x';
             this.signup_password.Size = new System.Drawing.Size(230, 25);
             this.signup_password.TabIndex = 35;
+            this.signup_password.TextChanged += new System.EventHandler(this.signup_password_TextChanged);
             // 
             // signup_username
             // 
@@ -662,24 +681,6 @@ namespace PET_HOSTEL
             // adminBindingSource1
             // 
             this.adminBindingSource1.DataMember = "admin";
-            // 
-            // btn_Uptate
-            // 
-            this.btn_Uptate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_Uptate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Uptate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(108)))), ((int)(((byte)(57)))));
-            this.btn_Uptate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(108)))), ((int)(((byte)(57)))));
-            this.btn_Uptate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Uptate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Uptate.ForeColor = System.Drawing.Color.White;
-            this.btn_Uptate.Location = new System.Drawing.Point(88, 182);
-            this.btn_Uptate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btn_Uptate.Name = "btn_Uptate";
-            this.btn_Uptate.Size = new System.Drawing.Size(90, 35);
-            this.btn_Uptate.TabIndex = 43;
-            this.btn_Uptate.Text = "Update";
-            this.btn_Uptate.UseVisualStyleBackColor = false;
-            this.btn_Uptate.Click += new System.EventHandler(this.btn_Uptate_Click_1);
             // 
             // AdminPanel
             // 

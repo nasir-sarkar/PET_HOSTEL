@@ -199,7 +199,24 @@ namespace PET_HOSTEL
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                connect.Open();
+
+                string query = "UPDATE admin SET login_status = 0";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.ExecuteNonQuery();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
     }
 }

@@ -168,11 +168,6 @@
       <DependentUpon>Changepasss.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="DatabasePetHostelDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabasePetHostelDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,7 +192,6 @@
     <Compile Include="PaymentMethod.Designer.cs">
       <DependentUpon>PaymentMethod.cs</DependentUpon>
     </Compile>
-    <Compile Include="PetHostelDataAccess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.cs">
@@ -268,17 +262,6 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabasePetHostelDataSet.xsc">
-      <DependentUpon>DatabasePetHostelDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabasePetHostelDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabasePetHostelDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabasePetHostelDataSet.xss">
-      <DependentUpon>DatabasePetHostelDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

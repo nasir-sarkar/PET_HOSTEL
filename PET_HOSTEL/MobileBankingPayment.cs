@@ -131,7 +131,7 @@ namespace PET_HOSTEL
                     Random random = new Random();
                     string tokenCode = "PAS" + random.Next(1000, 9999);
 
-                    // Prepare receipt details
+            
                     string printDetails = $"Username: {username}\n" +
                                           $"Pet type: {petType}\n" +
                                           $"Injection Status: {injectionStatus}\n" +
@@ -141,7 +141,6 @@ namespace PET_HOSTEL
                                           $"Total Amount: {totalAmount} TAKA\n" +
                                           $"Token Code: {tokenCode}";
 
-                    // Display the print dialog
                     PrintDialog printDialog = new PrintDialog();
                     if (printDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -153,7 +152,6 @@ namespace PET_HOSTEL
                         pd.Print();
                     }
 
-                    // Save as PDF
                     string pdfDirectory = @"C:\Receipts\";
                     if (!Directory.Exists(pdfDirectory))
                     {
@@ -200,10 +198,29 @@ namespace PET_HOSTEL
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+
             Login l1= new Login();
             l1.Show();
             this.Hide();
+
+            try
+            {              
+                connect.Open();
+          
+                string query = "UPDATE admin SET login_status = 0";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.ExecuteNonQuery();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
 
         private void txt_Username_TextChanged(object sender, EventArgs e)

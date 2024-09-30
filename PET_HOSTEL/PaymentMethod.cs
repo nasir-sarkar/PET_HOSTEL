@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PET_HOSTEL
 {
     public partial class PaymentMethod : Form
     {
-        public PaymentMethod()
+        private string loggedInUsername;
+        public PaymentMethod(string username)
         {
             InitializeComponent();
+            loggedInUsername = username;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -79,7 +82,7 @@ namespace PET_HOSTEL
        
         private void backBtn_Click(object sender, EventArgs e)
         {
-            UserPanel userpnl = new UserPanel();
+            UserPanel userpnl = new UserPanel(loggedInUsername);
             userpnl.Show();
             this.Hide();
         }

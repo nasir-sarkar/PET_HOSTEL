@@ -71,7 +71,6 @@ namespace PET_HOSTEL
                 {
                     connect.Open();
 
-
                     string selectData = "SELECT username, password, usertype FROM admin WHERE username = @username AND password = @pass";
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
                     {
@@ -84,7 +83,6 @@ namespace PET_HOSTEL
 
                         if (table.Rows.Count == 1)
                         {
-
                             DataRow row = table.Rows[0];
                             int userType = Convert.ToInt32(row["usertype"]);
 
@@ -95,28 +93,23 @@ namespace PET_HOSTEL
                                 updateCmd.ExecuteNonQuery();
                             }
 
+                            // Pass the username to the next form
                             if (userType == 1)
                             {
-
-                                UserPanel userPanel = new UserPanel();
+                                UserPanel userPanel = new UserPanel(login_username.Text);
                                 userPanel.Show();
                                 this.Hide();
                             }
                             else if (userType == 0)
                             {
-
-                              AdminPanel adminPanel = new AdminPanel();
+                                AdminPanel adminPanel = new AdminPanel();
                                 adminPanel.Show();
-                              AdminPanel ad=new AdminPanel();
-                                ad.Show();
                                 this.Hide();
                             }
                             else
                             {
                                 MessageBox.Show("Unknown user type", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-
-                            this.Hide();
                         }
                         else
                         {

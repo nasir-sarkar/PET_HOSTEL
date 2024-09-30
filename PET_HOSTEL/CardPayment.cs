@@ -162,7 +162,6 @@ namespace PET_HOSTEL
                     Random random = new Random();
                     string tokenCode = "PAS" + random.Next(1000, 9999);
 
-                    // Prepare receipt details
                     string printDetails = $"Username: {username}\n" +
                                           $"Pet type: {petType}\n" +
                                           $"Injection Status: {injectionStatus}\n" +
@@ -172,7 +171,6 @@ namespace PET_HOSTEL
                                           $"Total Amount: {totalAmount} TAKA\n" +
                                           $"Token Code: {tokenCode}";
 
-                    // Display the print dialog
                     PrintDialog printDialog = new PrintDialog();
                     if (printDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -184,7 +182,6 @@ namespace PET_HOSTEL
                         pd.Print();
                     }
 
-                    // Save as PDF
                     string pdfDirectory = @"C:\Receipts\";
                     if (!Directory.Exists(pdfDirectory))
                     {

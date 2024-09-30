@@ -15,18 +15,24 @@ namespace PET_HOSTEL
     {
        private SqlConnection connect;
         private bool isTotalChecked = false;
-        
 
-        public UserPanel()
+        private string currentUsername;
+        private string loggedInUsername;
+
+
+        public UserPanel(string username)
         {
             InitializeComponent();
             DataAccess dataAccess = new DataAccess();
             connect = new SqlConnection(dataAccess.GetConnectionString());
+            currentUsername = username;
+            loggedInUsername = username;
+
         }
 
         private void UserPanel_Load(object sender, EventArgs e)
         {
-
+            username.Text = loggedInUsername;
         }
 
 
@@ -139,7 +145,7 @@ namespace PET_HOSTEL
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    PaymentMethod z = new PaymentMethod();
+                    PaymentMethod z = new PaymentMethod(loggedInUsername);
                     z.Show();
                     this.Hide();
                 }

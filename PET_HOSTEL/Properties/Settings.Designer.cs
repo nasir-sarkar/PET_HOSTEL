@@ -77,5 +77,16 @@ namespace PET_HOSTEL.Properties {
                 return ((string)(this["DatabasePetHostelConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\FINAL_PROJECT_Database\\Pet" +
+            "Hostel_Database.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string PetHostel_DatabaseConnectionString {
+            get {
+                return ((string)(this["PetHostel_DatabaseConnectionString"]));
+            }
+        }
     }
 }

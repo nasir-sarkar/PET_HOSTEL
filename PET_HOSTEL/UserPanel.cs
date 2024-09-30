@@ -35,6 +35,40 @@ namespace PET_HOSTEL
 
         }
 
+
+        private int GetPetCostFromDatabase(string petType)
+        {
+            int cost = 0;
+
+            try
+            {
+                connect.Open();
+                string query = $"SELECT {petType.ToLower()}_cost FROM cost";
+                SqlCommand cmd = new SqlCommand(query, connect);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    cost = Convert.ToInt32(result);
+                }
+                else
+                {
+                    MessageBox.Show($"No cost found for {petType}. Using default value.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching pet cost: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+            return cost;
+        }
+
+
         private void button_Next_Click(object sender, EventArgs e)
         {
             if (!isTotalChecked)
@@ -49,18 +83,8 @@ namespace PET_HOSTEL
                 return; 
             }
 
-            int totalAmount = 0;
 
-            switch (petType.SelectedItem.ToString())
-            {
-                case "Cat": totalAmount += 600; break;
-                case "Dog": totalAmount += 700; break;
-                case "Rabbit": totalAmount += 500; break;
-                case "Tortoise": totalAmount += 650; break;
-                case "Hamster": totalAmount += 800; break;
-                case "Bird": totalAmount += 400; break;
-                case "Fish": totalAmount += 450; break;
-            }
+            int totalAmount = GetPetCostFromDatabase(petType.SelectedItem.ToString());
 
 
             switch (age.SelectedItem.ToString())
@@ -252,20 +276,9 @@ namespace PET_HOSTEL
             }
 
 
-            int totalAmount = 0;
-           
-            switch (petType.SelectedItem.ToString())
-            {
-                case "Cat": totalAmount += 600; break;
-                case "Dog": totalAmount += 700; break;
-                case "Rabbit": totalAmount += 500; break;
-                case "Tortoise": totalAmount += 650; break;
-                case "Hamster": totalAmount += 800; break;
-                case "Bird": totalAmount += 400; break;
-                case "Fish": totalAmount += 450; break;
-            }
+            int totalAmount = GetPetCostFromDatabase(petType.SelectedItem.ToString());
 
-           
+
             switch (age.SelectedItem.ToString())
             {
                 case "Up to 5 months": totalAmount += 150; break;

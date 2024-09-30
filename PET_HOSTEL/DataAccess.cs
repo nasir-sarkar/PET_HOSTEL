@@ -25,15 +25,10 @@ namespace PET_HOSTEL
        
 
         public DataAccess()
-
         {
 
-            
-
-
             connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\FINAL_PROJECT_Database\\PetHostel_Database.mdf;Integrated Security=True;Connect Timeout=30";
-
-
+        
         }
 
       

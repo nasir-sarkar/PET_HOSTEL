@@ -59,7 +59,39 @@ namespace PET_HOSTEL
             }
         }
 
-       
+
+        private void LoadCostData()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM cost";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+
+                    conn.Open();
+
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count > 0)
+                    {
+                        dataGridView2.DataSource = table;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found in the cost table.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}\nStack Trace: {ex.StackTrace}");
+            }
+        }
+
+
 
         private bool IsValidEmail(string email)
         {
@@ -69,13 +101,13 @@ namespace PET_HOSTEL
 
       
 
-
         private void AdminPanel_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'databasePetHostelDataSet.admin' table. You can move, or remove it, as needed.
-            //this.adminTableAdapter.Fill(this.databasePetHostelDataSet.admin);
-
+        {            
+            this.costTableAdapter.Fill(this.petHostel_DatabaseDataSet1.cost);          
+            this.adminTableAdapter.Fill(this.petHostel_DatabaseDataSet.admin);      
         }
+
+
         private void btn_Show_Click_1(object sender, EventArgs e)
         {
         
@@ -131,6 +163,7 @@ namespace PET_HOSTEL
         private void btn_Refresh_Click_1(object sender, EventArgs e)
         {
             ShowAdminData();
+            LoadCostData();
         }
 
         private void btn_Uptate_Click_1(object sender, EventArgs e)
@@ -358,5 +391,85 @@ namespace PET_HOSTEL
             
         }
 
+        private void comboBox_petType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Cost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_UpdateCost_Click(object sender, EventArgs e)
+        {
+            string selectedPetType = comboBox_petType.SelectedItem?.ToString();
+            string cost = textBox_Cost.Text.Trim();
+
+            if (string.IsNullOrEmpty(selectedPetType) || string.IsNullOrEmpty(cost))
+            {
+                MessageBox.Show("Please select a pet type and enter a cost.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "";
+
+                    switch (selectedPetType.ToLower())
+                    {
+                        case "cat":
+                            query = "UPDATE cost SET cat_cost = @cost";
+                            break;
+                        case "dog":
+                            query = "UPDATE cost SET dog_cost = @cost";
+                            break;
+                        case "rabbit":
+                            query = "UPDATE cost SET rabbit_cost = @cost";
+                            break;
+                        case "tortoise":
+                            query = "UPDATE cost SET tortoise_cost = @cost";
+                            break;
+                        case "hamster":
+                            query = "UPDATE cost SET hamster_cost = @cost";
+                            break;
+                        case "bird":
+                            query = "UPDATE cost SET bird_cost = @cost";
+                            break;
+                        case "fish":
+                            query = "UPDATE cost SET fish_cost = @cost";
+                            break;
+                        default:
+                            MessageBox.Show("Invalid pet type selected.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@cost", int.Parse(cost));
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected >= 1)
+                        {
+                            MessageBox.Show($"{selectedPetType} cost updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadCostData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cost update failed. No rows were affected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}\nStack Trace: {ex.StackTrace}");
+            }
+        }
     }
 }

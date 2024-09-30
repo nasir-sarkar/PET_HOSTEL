@@ -14,6 +14,7 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using System.Drawing.Printing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PET_HOSTEL
 {
@@ -22,15 +23,16 @@ namespace PET_HOSTEL
         private SqlConnection connect;
 
         private bool isPaymentConfirmed = false;
+        private string loggedInUsername;
 
-        public MobileBankingPayment()
+        public MobileBankingPayment(string username)
         {
             InitializeComponent();
             DataAccess dataAccess = new DataAccess();
             connect = new SqlConnection(dataAccess.GetConnectionString());
-
+            loggedInUsername = username;
         }
-
+      
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             
@@ -97,7 +99,9 @@ namespace PET_HOSTEL
 
         private void MobileBankingPayment_Load(object sender, EventArgs e)
         {
-
+           
+                txt_Username.Text = loggedInUsername;
+            
         }
 
         private void button_Print_Click(object sender, EventArgs e)

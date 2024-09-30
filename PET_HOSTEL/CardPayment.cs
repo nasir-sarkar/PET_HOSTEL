@@ -23,12 +23,13 @@ namespace PET_HOSTEL
     {
         private SqlConnection connect;
         private bool isPaymentConfirmed = false;
-
-        public CardPayment()
+        private string loggedInUsername;
+        public CardPayment(string username)
         {
             InitializeComponent();
             DataAccess dataAccess = new DataAccess();
             connect = new SqlConnection(dataAccess.GetConnectionString());
+            loggedInUsername = username;
 
         }
 
@@ -98,7 +99,7 @@ namespace PET_HOSTEL
 
         private void CardPayment_Load(object sender, EventArgs e)
         {
-
+            txt_Username.Text = loggedInUsername;
         }
 
         private void label2_Click(object sender, EventArgs e)

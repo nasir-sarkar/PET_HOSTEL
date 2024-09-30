@@ -27,49 +27,49 @@ namespace PET_HOSTEL
 
         private void visa_Click(object sender, EventArgs e)
         {
-            CardPayment a = new CardPayment();
+            CardPayment a = new CardPayment(loggedInUsername);
             a.Show();         
         }
 
         private void masterCard_Click(object sender, EventArgs e)
         {
-            CardPayment b = new CardPayment();
+            CardPayment b = new CardPayment(loggedInUsername);
             b.Show();         
         }
 
         private void payPal_Click(object sender, EventArgs e)
         {
-            CardPayment c = new CardPayment();
+            CardPayment c = new CardPayment(loggedInUsername);
             c.Show();
         }
 
         private void bkash_Click(object sender, EventArgs e)
         {
-            MobileBankingPayment d = new MobileBankingPayment();
+            MobileBankingPayment d = new MobileBankingPayment(loggedInUsername);
             d.Show();
         }
 
         private void nogod_Click(object sender, EventArgs e)
         {
-            MobileBankingPayment d = new MobileBankingPayment();
+            MobileBankingPayment d = new MobileBankingPayment(loggedInUsername);
             d.Show();         
         }
 
         private void rocked_Click(object sender, EventArgs e)
         {
-            MobileBankingPayment d = new MobileBankingPayment();
+            MobileBankingPayment d = new MobileBankingPayment(loggedInUsername);
             d.Show();
         }
 
         private void upay_Click(object sender, EventArgs e)
         {
-            MobileBankingPayment d = new MobileBankingPayment();
+            MobileBankingPayment d = new MobileBankingPayment(loggedInUsername);
             d.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            CardPayment f = new CardPayment();
+            CardPayment f = new CardPayment(loggedInUsername);  
             f.Show();
         }
 

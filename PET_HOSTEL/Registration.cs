@@ -78,34 +78,31 @@ namespace PET_HOSTEL
 
 
             else
-
-
-            if (connect.State != ConnectionState.Open)
             {
                 try
-                {
-                    connect.Open();
-                    String checkUsername = "SELECT * FROM admin WHERE username = '"
-                            + signup_username.Text.Trim() + "'";
-
+                {                  
+                    if (connect.State != ConnectionState.Open)
+                    {
+                        connect.Open();
+                    }
+                  
+                    String checkUsername = "SELECT * FROM admin WHERE username = @username";
                     using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
                     {
+                        checkUser.Parameters.AddWithValue("@username", signup_username.Text.Trim());
                         SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
                         DataTable table = new DataTable();
                         adapter.Fill(table);
 
                         if (table.Rows.Count >= 1)
-                        {
-                            MessageBox.Show(signup_username.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {                           
+                            MessageBox.Show(signup_username.Text + " already exists, please try again with a different username", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
-                        {
+                        {                           
                             string insertData = "INSERT INTO admin (email, username, password, dob, date_created) " +
-                                "VALUES(@email, @username, @pass, @dob, @date)";
-
+                                                "VALUES(@email, @username, @pass, @dob, @date)";
                             DateTime date = DateTime.Today.Date;
-
-
 
                             using (SqlCommand cmd = new SqlCommand(insertData, connect))
                             {
@@ -116,9 +113,8 @@ namespace PET_HOSTEL
                                 cmd.Parameters.AddWithValue("@date", date);
 
                                 cmd.ExecuteNonQuery();
-
                                 MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                               
                                 Login lForm1 = new Login();
                                 lForm1.Show();
                                 this.Hide();
@@ -128,12 +124,16 @@ namespace PET_HOSTEL
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error connecting database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error connecting to database: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
-                    this.Close();
+                    if (connect.State == ConnectionState.Open)
+                    {
+                        connect.Close();
+                    }
                 }
+                           
             }
         }
 

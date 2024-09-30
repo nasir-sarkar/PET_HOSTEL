@@ -67,7 +67,7 @@ namespace PET_HOSTEL
 
                 if (paymentAmount == amount)
                 {
-                    string updateQuery = "UPDATE admin SET payment_status = 'Paid' WHERE username = @username";
+                    string updateQuery = "UPDATE admin SET payment_status = 'Paid', login_status = 0 WHERE username = @username";
                     SqlCommand updateCmd = new SqlCommand(updateQuery, connect);
                     updateCmd.Parameters.AddWithValue("@username", txt_Username.Text);
                     updateCmd.ExecuteNonQuery();
@@ -77,17 +77,7 @@ namespace PET_HOSTEL
                 }
                 else
                 {
-                    string clearFieldsQuery = "UPDATE admin SET pet = NULL, pet_age = NULL, injection_status = NULL, medicine_needed = NULL, start_date = NULL, checkout_date = NULL, payment_amount = 0 WHERE username = @username";
-                    SqlCommand clearFieldsCmd = new SqlCommand(clearFieldsQuery, connect);
-                    clearFieldsCmd.Parameters.AddWithValue("@username", txt_Username.Text);
-                    clearFieldsCmd.ExecuteNonQuery();
-
-                    MessageBox.Show("You entered the wrong amount. Please book again and check the total amount from the beginning.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    UserPanel WForm1 = new UserPanel();
-                    WForm1.Show();
-                    this.Hide();
-
+                    MessageBox.Show("Please, enter the correct amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -147,7 +137,7 @@ namespace PET_HOSTEL
 
                     MessageBox.Show(printDetails, "Payment Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    string filePath = $@"D:\OOP2PROJECT\Receipts\{username}_PaymentReceipt.txt";
+                    string filePath = $@"D:\Receipts\{username}_PaymentReceipt.txt";
 
 
                     Directory.CreateDirectory(@"C:\Receipts");

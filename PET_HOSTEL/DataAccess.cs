@@ -30,7 +30,11 @@ namespace PET_HOSTEL
 
             
 
+<<<<<<< HEAD
             connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\naimur\\OneDrive\\Documents\\logindata.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False"; // Set it privately
+=======
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\FINAL_PROJECT_Database\\PetHostelDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+>>>>>>> 496c5df1989eab9110369a84ef1ca5fe23388f53
 
         }
 
@@ -43,9 +47,6 @@ namespace PET_HOSTEL
             return connectionString;
 
         }
-
-        
-
         public void ConnectToDatabase()
 
         {

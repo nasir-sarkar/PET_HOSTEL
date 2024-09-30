@@ -75,7 +75,7 @@ namespace PET_HOSTEL
 
             if (injectionStatus.SelectedItem.ToString() == "No")
             {
-                totalAmount += 200;
+                totalAmount += 500;
             }
 
             if (medicineNeeded.SelectedItem.ToString() == "Yes")
@@ -83,31 +83,16 @@ namespace PET_HOSTEL
                 totalAmount += 300;
             }
 
-            TimeSpan dateDifference = checkoutDate.Value - startDate.Value;
-            int days = (int)dateDifference.TotalDays;
+            TimeSpan dateDifference = checkoutDate.Value.Date - startDate.Value.Date;
+            int days = dateDifference.Days;
 
+            if (days == 0)
+            {
+                days = 1;
+            }
             if (days > 0)
             {
-                if (days <= 5)
-                {
-                    totalAmount += 400;
-                }
-                else if (days <= 10)
-                {
-                    totalAmount += 800;
-                }
-                else if (days <= 15)
-                {
-                    totalAmount += 1200;
-                }
-                else if (days <= 20)
-                {
-                    totalAmount += 1600;
-                }
-                else if (days <= 30)
-                {
-                    totalAmount += 2000;
-                }
+                totalAmount += days * 300;
             }
 
 
@@ -201,6 +186,23 @@ namespace PET_HOSTEL
 
         private void button_Logout_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connect.Open();
+                string query = "UPDATE admin SET login_status = 0 WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.Parameters.AddWithValue("@username", username.Text);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
             Login lForm1 = new Login();
             lForm1.Show();
             this.Hide();
@@ -219,9 +221,39 @@ namespace PET_HOSTEL
                 return;
             }
 
-            int totalAmount = 0;
+            int loginStatus = 0;
+            try
+            {
+                connect.Open();
+                string query = "SELECT login_status FROM admin WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.Parameters.AddWithValue("@username", username.Text);
 
-            
+                var result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    loginStatus = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                connect.Close();
+            }
+           
+            if (loginStatus != 1)
+            {
+                MessageBox.Show("Please insert your correct username.");
+                return;
+            }
+
+
+            int totalAmount = 0;
+           
             switch (petType.SelectedItem.ToString())
             {
                 case "Cat": totalAmount += 600; break;
@@ -246,7 +278,7 @@ namespace PET_HOSTEL
           
             if (injectionStatus.SelectedItem.ToString() == "No")
             {
-                totalAmount += 200;
+                totalAmount += 500;
             }
 
           
@@ -255,35 +287,20 @@ namespace PET_HOSTEL
                 totalAmount += 300;
             }
 
-          
-            TimeSpan dateDifference = checkoutDate.Value - startDate.Value;
-            int days = (int)dateDifference.TotalDays;
 
+            TimeSpan dateDifference = checkoutDate.Value.Date - startDate.Value.Date;
+            int days = dateDifference.Days;
+
+            if (days == 0)
+            {
+                days = 1;
+            }
             if (days > 0)
             {
-                if (days <= 5)
-                {
-                    totalAmount += 400;
-                }
-                else if (days <= 10)
-                {
-                    totalAmount += 800;
-                }
-                else if (days <= 15)
-                {
-                    totalAmount += 1200;
-                }
-                else if (days <= 20)
-                {
-                    totalAmount += 1600;
-                }
-                else if (days <= 30)
-                {
-                    totalAmount += 2000;
-                }
+                totalAmount += days * 300;
             }
 
-          
+
             MessageBox.Show($"Total Amount: {totalAmount} Taka", "Total Amount", MessageBoxButtons.OK, MessageBoxIcon.Information);        
             isTotalChecked = true;
         }

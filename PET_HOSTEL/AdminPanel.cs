@@ -59,87 +59,7 @@ namespace PET_HOSTEL
             }
         }
 
-        private void signup_btn_Click(object sender, EventArgs e)
-        {
-            if (signup_email.Text == "" || signup_username.Text == "" || signup_password.Text == "")
-            {
-                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (!IsValidEmail(signup_email.Text))
-            {
-                MessageBox.Show("Please enter a valid email address", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else
-            {
-                try
-                {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                    
-                        string checkUsername = "SELECT * FROM admin WHERE username = @username";
-
-                        using (SqlCommand checkUser = new SqlCommand(checkUsername, conn))
-                        {
-                            checkUser.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-
-                            SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
-
-                            if (table.Rows.Count >= 1)
-                            {
-                                MessageBox.Show(signup_username.Text + " already exists", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                string insertData = "INSERT INTO admin (email, username, password, dob, usertype, date_created) " +
-                                    "VALUES(@email, @username, @pass, @dob, @usertype, @date)";
-
-                                DateTime date = DateTime.Today;
-
-                                using (SqlCommand cmd = new SqlCommand(insertData, conn))
-                                {
-                                    cmd.Parameters.AddWithValue("@email", signup_email.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@pass", signup_password.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@dob", signup_dob.Value);
-                                    cmd.Parameters.AddWithValue("@date", date);
-
-                                    int userType;
-                                    if (int.TryParse(txt_usertype.Text.Trim(), out userType))
-                                    {
-                                        cmd.Parameters.AddWithValue("@usertype", userType);
-                                    }
-                                    else
-                                    {                                      
-                                        cmd.Parameters.AddWithValue("@usertype", 1);
-                                    }
-
-                                    cmd.ExecuteNonQuery();
-
-                                    MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                             
-                                    signup_email.Text = "";
-                                    signup_username.Text = "";
-                                    signup_password.Text = "";
-                                    signup_dob.Value = DateTime.Today; 
-                                    txt_usertype.Text = "";
-                                 
-                                    signup_email.Focus();                               
-                                    ShowAdminData();
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error connecting to database: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+       
 
         private bool IsValidEmail(string email)
         {
@@ -147,74 +67,8 @@ namespace PET_HOSTEL
             return Regex.IsMatch(email, pattern);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login lForm1 = new Login();
-            lForm1.Show();
-            this.Hide();
-        }
- 
+      
 
-        private void txt_usertype_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        
-
-        
-
-       
- 
-
-        private void btn_Show_Click(object sender, EventArgs e)
-        {          
-            string username = txt_UsernameSearch.Text.Trim();
-         
-            if (string.IsNullOrEmpty(username))
-            {
-                MessageBox.Show("Please enter a username to search.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                 
-                    string query = "SELECT * FROM admin WHERE username = @username";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {                     
-                        cmd.Parameters.AddWithValue("@username", username);
-
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                     
-                        dataGridView1.DataSource = dataTable;
-
-                        signup_email.Text = "";
-                        txt_UsernameSearch.Text = "";
-                        signup_password.Text = "";
-                        signup_dob.Value = DateTime.Today;
-                        txt_usertype.Text = "";
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving data: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-
-        private void txt_UsernameSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
@@ -222,45 +76,12 @@ namespace PET_HOSTEL
             //this.adminTableAdapter.Fill(this.databasePetHostelDataSet.admin);
 
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        
-        private void panel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label10_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btn_Show_Click_1(object sender, EventArgs e)
         {
-            // Get the username from a TextBox (assumed you have a TextBox for input)
+        
             string username = txt_UsernameSearch.Text.Trim();
 
-            // Validate if the username is provided
+             
             if (string.IsNullOrEmpty(username))
             {
                 MessageBox.Show("Please enter a username to search.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -273,23 +94,23 @@ namespace PET_HOSTEL
                 {
                     conn.Open();
 
-                    // SQL query to search for the username in the 'admin' table
+                    
                     string query = "SELECT * FROM admin WHERE username = @username";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        // Add the username parameter to the query
+                        
                         cmd.Parameters.AddWithValue("@username", username);
 
-                        // Execute the query and fill the result into a DataTable
+                       
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
-                        // Display the search result in the DataGridView
+                       
                         dataGridView1.DataSource = dataTable;
 
-                        // Clear the search input and other fields after displaying the result
+                       
                         signup_email.Text = "";
                         txt_UsernameSearch.Text = "";
                         signup_password.Text = "";
@@ -300,7 +121,7 @@ namespace PET_HOSTEL
             }
             catch (Exception ex)
             {
-                // Show any errors that occur during the search
+               
                 MessageBox.Show("Error retrieving data: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -503,13 +324,7 @@ namespace PET_HOSTEL
                 }
             }
         }
-
-        private void Back_Click(object sender, EventArgs e)
-        {
-            Login l = new Login();
-            l.Show();
-            this.Hide();
-        }
+ 
 
         private void signup_showPass_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -523,9 +338,26 @@ namespace PET_HOSTEL
             }
         }
 
+<<<<<<< HEAD
         private void signup_password_TextChanged(object sender, EventArgs e)
         {
 
         }
+=======
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Back_Click_1(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.Show();
+            
+        }
+
+>>>>>>> 496c5df1989eab9110369a84ef1ca5fe23388f53
     }
 }

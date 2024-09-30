@@ -26,10 +26,8 @@ namespace PET_HOSTEL
 
         private void sotp_Click(object sender, EventArgs e)
         {
-            // Check if email exists in the database
             if (IsEmailRegistered(temail.Text))
             {
-                // Send OTP to email
                 randomCode = GenerateOtp();
                 bool isEmailSent = SendOtpEmail(temail.Text, randomCode);
 
@@ -55,9 +53,8 @@ namespace PET_HOSTEL
                 to = temail.Text;
                 MessageBox.Show("Verification successful!");
 
-                // Show new form for password reset
                 Changepasss cp = new Changepasss();
-                cp.UserEmail = to;  // Pass the email to the Changepasss form
+                cp.UserEmail = to; 
                 cp.Show();
                 this.Hide();
             }
@@ -78,20 +75,18 @@ namespace PET_HOSTEL
         {
         }
 
-        // Function to generate a random OTP
         private string GenerateOtp()
         {
             Random rand = new Random();
             return (rand.Next(100000, 999999)).ToString();
         }
 
-        // Function to send OTP email
         private bool SendOtpEmail(string toEmail, string otp)
         {
             try
             {
-                string from = "mrx999888@gmail.com";  // Replace with your email
-                string pass = "flgm qnoc hwms gzop";  // Replace with your app-specific password
+                string from = "mrx999888@gmail.com"; 
+                string pass = "flgm qnoc hwms gzop";  
                 string subject = "Password Reset Code";
                 string body = $"Your reset code is {otp}";
 
@@ -109,17 +104,16 @@ namespace PET_HOSTEL
                     Credentials = new NetworkCredential(from, pass)
                 };
 
-                smtp.Send(message);  // Send email
+                smtp.Send(message);  
                 return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to send code: " + ex.Message);  // Handle email errors
+                MessageBox.Show("Failed to send code: " + ex.Message); 
                 return false;
             }
         }
 
-        // Function to check if the email exists in the database
         private bool IsEmailRegistered(string email)
         {
             try
@@ -133,7 +127,7 @@ namespace PET_HOSTEL
                     int count = (int)command.ExecuteScalar();
 
                     connect.Close();
-                    return count > 0;  // Return true if the email exists, false otherwise
+                    return count > 0;  
                 }
             }
             catch (Exception ex)

@@ -36,7 +36,6 @@ namespace PET_HOSTEL
 
             MessageBox.Show($"Updating password for: {UserEmail}");
 
-            // Update the password in the database
             try
             {
                 using (SqlConnection connect = new SqlConnection(connectionString))

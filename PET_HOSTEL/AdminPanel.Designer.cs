@@ -83,10 +83,9 @@ namespace PET_HOSTEL
             this.adminBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.adminBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-<<<<<<< HEAD
-=======
+
             this.Back = new System.Windows.Forms.Button();
->>>>>>> 496c5df1989eab9110369a84ef1ca5fe23388f53
+
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource4)).BeginInit();
@@ -676,8 +675,7 @@ namespace PET_HOSTEL
             // 
             this.adminBindingSource1.DataMember = "admin";
             // 
-<<<<<<< HEAD
-=======
+
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -695,7 +693,6 @@ namespace PET_HOSTEL
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click_1);
             // 
->>>>>>> 496c5df1989eab9110369a84ef1ca5fe23388f53
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);

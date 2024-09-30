@@ -9,6 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System.Drawing.Printing;
 
 namespace PET_HOSTEL
 {
@@ -126,6 +131,7 @@ namespace PET_HOSTEL
                     Random random = new Random();
                     string tokenCode = "PAS" + random.Next(1000, 9999);
 
+                    // Prepare receipt details
                     string printDetails = $"Username: {username}\n" +
                                           $"Pet type: {petType}\n" +
                                           $"Injection Status: {injectionStatus}\n" +
@@ -135,16 +141,35 @@ namespace PET_HOSTEL
                                           $"Total Amount: {totalAmount} TAKA\n" +
                                           $"Token Code: {tokenCode}";
 
-                    MessageBox.Show(printDetails, "Payment Receipt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Display the print dialog
+                    PrintDialog printDialog = new PrintDialog();
+                    if (printDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        PrintDocument pd = new PrintDocument();
+                        pd.PrintPage += (s, ev) =>
+                        {
+                            ev.Graphics.DrawString(printDetails, new Font("Arial", 12), Brushes.Black, 10, 10);
+                        };
+                        pd.Print();
+                    }
 
-                    string filePath = $@"D:\Receipts\{username}_PaymentReceipt.txt";
+                    // Save as PDF
+                    string pdfDirectory = @"C:\Receipts\";
+                    if (!Directory.Exists(pdfDirectory))
+                    {
+                        Directory.CreateDirectory(pdfDirectory);
+                    }
 
+                    string pdfPath = Path.Combine(pdfDirectory, $"{username}'s pet {petType}_PaymentReceipt.pdf");
+                    using (PdfWriter writer = new PdfWriter(pdfPath))
+                    using (PdfDocument pdf = new PdfDocument(writer))
+                    {
+                        Document document = new Document(pdf);
+                        document.Add(new Paragraph(printDetails).SetFontSize(12));
+                        document.Close();
+                    }
 
-                    Directory.CreateDirectory(@"C:\Receipts");
-
-                    File.WriteAllText(filePath, printDetails);
-
-                    MessageBox.Show($"Receipt saved to {filePath}", "Receipt Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Receipt saved to {pdfPath}", "Receipt Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Welcome WForm1 = new Welcome();
                     WForm1.Show();
@@ -159,13 +184,14 @@ namespace PET_HOSTEL
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("print sucess: " , "Sucess", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             finally
             {
                 connect.Close();
             }
         }
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -174,7 +200,10 @@ namespace PET_HOSTEL
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            Login l1= new Login();
+            l1.Show();
+            this.Hide();
         }
 
         private void txt_Username_TextChanged(object sender, EventArgs e)

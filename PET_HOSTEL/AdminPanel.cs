@@ -338,12 +338,12 @@ namespace PET_HOSTEL
             }
         }
 
-<<<<<<< HEAD
+
         private void signup_password_TextChanged(object sender, EventArgs e)
         {
 
         }
-=======
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -358,6 +358,5 @@ namespace PET_HOSTEL
             
         }
 
->>>>>>> 496c5df1989eab9110369a84ef1ca5fe23388f53
     }
 }

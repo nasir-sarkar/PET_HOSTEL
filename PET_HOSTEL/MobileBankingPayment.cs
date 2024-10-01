@@ -99,9 +99,37 @@ namespace PET_HOSTEL
 
         private void MobileBankingPayment_Load(object sender, EventArgs e)
         {
-           
-                txt_Username.Text = loggedInUsername;
-            
+
+            txt_Username.Text = loggedInUsername;
+
+            try
+            {
+                connect.Open();
+
+                string query = "SELECT payment_amount FROM admin WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, connect);
+                cmd.Parameters.AddWithValue("@username", loggedInUsername);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    int paymentAmount = Convert.ToInt32(result);
+                    text_Amount.Text = paymentAmount.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No payment amount found for the user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while fetching payment amount: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
 
         private void button_Print_Click(object sender, EventArgs e)

@@ -12,7 +12,8 @@ The Pet Hotel Management System guarantees a smooth experience from initial user
 
 
 # ER Diagram
-![ER Diagram](https://github.com/user-attachments/assets/a3742070-1080-4ddd-9e07-15a874a1acd6)
+![ER_Project](https://github.com/user-attachments/assets/bb08b16e-0018-4556-b544-6a59abe42c2d)
+
 
 
 
